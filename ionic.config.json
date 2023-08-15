@@ -1,0 +1,7 @@
+{
+  "name": "ChildFinder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
