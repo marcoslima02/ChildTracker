@@ -71,6 +71,10 @@ export class LoginPage implements OnInit {
   async esqueceuSenha(){
     console.log("esqueceu senha")
   }
+  async lembrarUsuario(){
+    console.log("Lembrar usuário")
+  }
+
 
   loginWithGoogle(){
     console.log("google")

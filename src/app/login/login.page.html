@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar id="toolbar" color="primary" style="display:none;">
     <ion-buttons slot="end">
       <!-- <ion-menu-button></ion-menu-button> -->
       <ion-button *ngIf="theme.tema == 1" (click)="enableLight()">
@@ -19,43 +19,43 @@
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
           <div class="ion-text-center">
-            <!-- <h1>Child Finder</h1> -->
-            <img *ngIf="theme.tema == 0" src="assets/images/logo.png" alt="">
-            <img *ngIf="theme.tema == 1" src="assets/images/logoDark.png" alt=""> 
+            <!-- <h1>Child Tracker</h1> -->
+            <img *ngIf="theme.tema == 0" src="assets/images/logo.png" alt="" id="logo">
+            <img *ngIf="theme.tema == 1" src="assets/images/logoDark.png" alt="">
           </div>
           <div class="ion-padding">
-            <ion-grid> 
-              <ion-label class="boldLabel">Email</ion-label>
+            <ion-grid>
+
               <ion-item class="itemPadding">
-                <ion-input name="email" [(ngModel)]="login.email"
-                  type="text" required>
+                <ion-input name="email" [(ngModel)]="login.email" type="text" placeholder="Login" ngModel required>
                 </ion-input>
               </ion-item>
-              <ion-label class="boldLabel">Senha</ion-label>
-              <ion-item class="itemPadding"> 
-                <ion-input name="senha" [(ngModel)]="login.senha"
-                  type="password" ngModel required>
+              <ion-item class="itemPadding">
+                <ion-input name="senha" [(ngModel)]="login.senha" type="password" placeholder="Senha" ngModel required>
                 </ion-input>
+
               </ion-item>
-              <div *ngIf="theme.tema == 0" style="color:#5a37c3;text-align: right;text-decoration: underline;">
-                <small (click)="esqueceuSenha()">Esqueceu sua senha?</small>
-              </div>
-              <div *ngIf="theme.tema == 1" style="color:#eeeeee;text-align: right;text-decoration: underline;">
-                <small (click)="esqueceuSenha()">Esqueceu sua senha?</small>
-              </div>
+              <ion-grid style="margin-top: 5%">
+                <ion-row>
+                  <ion-col><small style="color:#5a37c3;text-align: right;text-decoration: underline;"
+                      (click)="esqueceuSenha()">Esqueceu sua senha?</small></ion-col>
 
-              <div style="padding-top: 20px; padding-bottom: 20px;">
-                <ion-button size="large" color="primary" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
-              </div>
-    
-              <div *ngIf="theme.tema == 0" style="color:#a1a1a1;text-align: center;">
-                <small>———————————— ou ————————————</small>
-              </div>
-              <div *ngIf="theme.tema == 1" style="color:#bebebe;text-align: center;">
-                <small>———————————— ou ————————————</small>
-              </div>
+                  <ion-col><small><ion-checkbox labelPlacement="end" (click)="lembrarUsuario()">Lembrar
+                        Usuário</ion-checkbox></small></ion-col>
+                </ion-row>
+              </ion-grid>
+             
+              
 
-              <ion-grid style="padding-top: 5px;">
+
+
+              
+                <div style="color:#a1a1a1;text-align: center;margin-left: auto;
+                margin-right: auto;margin-bottom: 10%;margin-top: 15%;"><small>— ou conectar com —</small></div>
+              
+             
+
+              <ion-grid style="padding-top: 5px;margin-bottom:40%;">
                 <ion-row>
                   <ion-col size="4">
                     <a (click)="loginWithGoogle()" class="login-button">
@@ -82,14 +82,16 @@
                 </ion-row>
               </ion-grid>
 
-              <div style="text-align: center; padding-top: 7px;">
-                <ion-label>Precisa de uma conta? </ion-label>
-                <ion-label (click)="cadastro()" style="color: #38b6ff;font-weight: 700;">Cadastre-se</ion-label>
+
+              <div style="padding-top: 20px; padding-bottom: 20px;">
+                <ion-button size="medium" color="primary" type="submit" [disabled]="form.invalid" expand="block"
+                  shape="round">Criar minha conta!</ion-button>
               </div>
-
-
+              <div style="text-align: center; padding-top: 7px;">
+                <ion-label (click)="cadastro()" style="color: #8147ff;font-weight: 700;">Não tem uma conta?</ion-label>
+              </div>
             </ion-grid>
-          </div> 
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>

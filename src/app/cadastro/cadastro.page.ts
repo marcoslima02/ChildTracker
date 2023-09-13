@@ -28,6 +28,7 @@ export class CadastroPage implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
+      cpf: [[],Validators.required],
       email: [[],Validators.required],
       senha: [[],Validators.required],
       repetirSenha: [[],Validators.required],
@@ -66,5 +67,7 @@ export class CadastroPage implements OnInit {
     this.nav.navigateRoot(['/login']);
   }
 
-
+  termosUso(){
+    console.log("Aceito os termos de uso")
+  }
 }

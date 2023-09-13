@@ -12,7 +12,6 @@
     <ion-title>Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
-<style></style>
 <ion-content [fullscreen]="true" class="ion-padding">
   <form #form="ngForm">
     <ion-grid>
@@ -20,76 +19,45 @@
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
           <div class="ion-padding">
             <ion-grid>
-
-              <ion-label class="boldLabel">CPF</ion-label>
               <ion-item class="itemPadding">
-                <ion-input name="email" [(ngModel)]="cadastro.cpf" type="text" required>
+                <ion-input placeholder="CPF" name="cpf" [(ngModel)]="cadastro.cpf" type="text" required>
                 </ion-input>
               </ion-item>
 
-              <ion-label class="boldLabel">Email</ion-label>
               <ion-item class="itemPadding">
-                <ion-input name="email" [(ngModel)]="cadastro.email" type="text" required>
+                <ion-input placeholder="Email" name="email" [(ngModel)]="cadastro.email" type="text" required>
                 </ion-input>
               </ion-item>
-
-              <ion-label class="boldLabel">Senha</ion-label>
               <ion-item class="itemPadding">
-                <ion-input name="senha" [(ngModel)]="cadastro.senha" type="password" ngModel required>
+                <ion-input name="celular" placeholder="Celular" [(ngModel)]="cadastro.telefone" type="text" ngModel
+                  required>
                 </ion-input>
               </ion-item>
-
-              <ion-label class="boldLabel">Repetir Senha</ion-label>
               <ion-item class="itemPadding">
-                <ion-input name="senha" [(ngModel)]="cadastro.repetirSenha" type="password" ngModel required>
+                <ion-input name="senha" placeholder="Senha" [(ngModel)]="cadastro.senha" type="password" ngModel
+                  required>
                 </ion-input>
               </ion-item>
-
-              <div style="padding-top: 20px; padding-bottom: 20px;">
-                <ion-button size="large" color="primary" [disabled]="form.invalid" expand="block">Cadastrar</ion-button>
-              </div>
-
-              <div *ngIf="theme.tema == 0" style="color:#a1a1a1;text-align: center;">
-                <small>———————————— ou ————————————</small>
-              </div>
-              <div *ngIf="theme.tema == 1" style="color:#bebebe;text-align: center;">
-                <small>———————————— ou ————————————</small>
-              </div>
-
-              <ion-grid style="padding-top: 5px;">
-                <ion-row>
-                  <ion-col size="4">
-                    <a (click)="loginWithGoogle()" class="login-button">
-                      <img src="assets/svg/Google.svg" alt="Google">
-                    </a>
-                  </ion-col>
-                  <ion-col size="4" style="margin-top: 2px;">
-                    <a (click)="loginWithFacebook()" class="login-button">
-                      <img src="assets/svg/Facebook.svg" alt="Facebook">
-                    </a>
-                  </ion-col>
-
-                  <ion-col size="4" *ngIf="theme.tema == 0" style="margin-top: -8px;">
-                    <a (click)="loginWithApple()" class="login-button">
-                      <img src="assets/svg/Apple_black.svg" alt="Apple">
-                    </a>
-                  </ion-col>
-
-                  <ion-col size="4" *ngIf="theme.tema == 1" style="margin-top: -8px;">
-                    <a (click)="loginWithApple()" class="login-button">
-                      <img src="assets/svg/Apple_grey.svg" alt="Apple">
-                    </a>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-
-              <div style="text-align: center; padding-top: 7px;">
-                <ion-label>Já tem uma conta? </ion-label>
-                <ion-label (click)="login()" style="color: #38b6ff;font-weight: 700;">Login</ion-label>
-              </div>
-
+              <ion-item class="itemPadding">
+                <ion-input name="senha" placeholder="Repetir Senha" [(ngModel)]="cadastro.repetirSenha" type="password"
+                  ngModel required>
+                </ion-input>
+              </ion-item>
 
             </ion-grid>
+            <ion-checkbox size="small" style="padding-top: 5%;" justify="end" (click)="termosUso()">Eu aceito os termos
+              e política de privacidade.</ion-checkbox>
+
+            <div style="padding-top: 20px; padding-bottom: 20px;">
+              <ion-button size="medium" color="primary" [disabled]="form.invalid" expand="block"
+                shape="round">Cadastrar</ion-button>
+            </div>
+            <div style="text-align: center; padding-top: 7px;">
+              <ion-label (click)="login()" style="color: #8147ff;font-weight: 700;">Esqueceu sua senha?</ion-label>
+            </div>
+
+
+
           </div>
         </ion-col>
       </ion-row>
