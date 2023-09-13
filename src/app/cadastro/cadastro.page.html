@@ -12,47 +12,43 @@
     <ion-title>Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<style></style>
 <ion-content [fullscreen]="true" class="ion-padding">
-  <form #form="ngForm" >
+  <form #form="ngForm">
     <ion-grid>
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
           <div class="ion-padding">
-            <ion-grid> 
+            <ion-grid>
 
               <ion-label class="boldLabel">CPF</ion-label>
               <ion-item class="itemPadding">
-                <ion-input name="email" [(ngModel)]="cadastro.cpf"
-                  type="text" required>
+                <ion-input name="email" [(ngModel)]="cadastro.cpf" type="text" required>
                 </ion-input>
               </ion-item>
 
               <ion-label class="boldLabel">Email</ion-label>
               <ion-item class="itemPadding">
-                <ion-input name="email" [(ngModel)]="cadastro.email"
-                  type="text" required>
+                <ion-input name="email" [(ngModel)]="cadastro.email" type="text" required>
                 </ion-input>
               </ion-item>
 
               <ion-label class="boldLabel">Senha</ion-label>
-              <ion-item class="itemPadding"> 
-                <ion-input name="senha" [(ngModel)]="cadastro.senha"
-                  type="password" ngModel required>
+              <ion-item class="itemPadding">
+                <ion-input name="senha" [(ngModel)]="cadastro.senha" type="password" ngModel required>
                 </ion-input>
               </ion-item>
 
               <ion-label class="boldLabel">Repetir Senha</ion-label>
-              <ion-item class="itemPadding"> 
-                <ion-input name="senha" [(ngModel)]="cadastro.repetirSenha"
-                  type="password" ngModel required>
+              <ion-item class="itemPadding">
+                <ion-input name="senha" [(ngModel)]="cadastro.repetirSenha" type="password" ngModel required>
                 </ion-input>
               </ion-item>
 
               <div style="padding-top: 20px; padding-bottom: 20px;">
                 <ion-button size="large" color="primary" [disabled]="form.invalid" expand="block">Cadastrar</ion-button>
               </div>
-    
+
               <div *ngIf="theme.tema == 0" style="color:#a1a1a1;text-align: center;">
                 <small>———————————— ou ————————————</small>
               </div>
@@ -94,7 +90,7 @@
 
 
             </ion-grid>
-          </div> 
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
