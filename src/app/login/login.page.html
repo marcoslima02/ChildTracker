@@ -1,14 +1,8 @@
 <ion-header>
   <ion-toolbar id="toolbar" color="primary" style="display:none;">
     <ion-buttons slot="end">
-      <!-- <ion-menu-button></ion-menu-button> -->
-      <ion-button *ngIf="theme.tema == 1" (click)="enableLight()">
-        <ion-icon name="sunny"></ion-icon>
-      </ion-button>
-      <ion-button *ngIf="theme.tema == 0" (click)="enableDark()">
-        <ion-icon name="moon"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    
+     </ion-buttons>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -20,8 +14,8 @@
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
           <div class="ion-text-center">
             <!-- <h1>Child Tracker</h1> -->
-            <img *ngIf="theme.tema == 0" src="assets/images/logo.png" alt="" id="logo">
-            <img *ngIf="theme.tema == 1" src="assets/images/logoDark.png" alt="">
+            <img  src="assets/images/logo.png" alt="" id="logo">
+           
           </div>
           <div class="ion-padding">
             <ion-grid>
@@ -68,17 +62,13 @@
                     </a>
                   </ion-col>
 
-                  <ion-col size="4" *ngIf="theme.tema == 0" style="margin-top: -8px;">
+                  <ion-col size="4"  style="margin-top: -8px;">
                     <a (click)="loginWithApple()" class="login-button">
                       <img src="assets/svg/Apple_black.svg" alt="Apple">
                     </a>
                   </ion-col>
 
-                  <ion-col size="4" *ngIf="theme.tema == 1" style="margin-top: -8px;">
-                    <a (click)="loginWithApple()" class="login-button">
-                      <img src="assets/svg/Apple_grey.svg" alt="Apple">
-                    </a>
-                  </ion-col>
+                  
                 </ion-row>
               </ion-grid>
 

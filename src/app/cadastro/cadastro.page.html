@@ -1,13 +1,9 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar style="display:none;" color="primary">
     <ion-buttons slot="end">
       <!-- <ion-menu-button></ion-menu-button> -->
-      <ion-button *ngIf="theme.tema == 1" (click)="enableLight()">
-        <ion-icon name="sunny"></ion-icon>
-      </ion-button>
-      <ion-button *ngIf="theme.tema == 0" (click)="enableDark()">
-        <ion-icon name="moon"></ion-icon>
-      </ion-button>
+      
+  
     </ion-buttons>
     <ion-title>Cadastro</ion-title>
   </ion-toolbar>
@@ -45,8 +41,8 @@
               </ion-item>
 
             </ion-grid>
-            <ion-checkbox size="small" style="padding-top: 5%;" justify="end" (click)="termosUso()">Eu aceito os termos
-              e política de privacidade.</ion-checkbox>
+            <ion-checkbox size="small" style="padding-top: 5%; padding-left: 25%;"  (click)="termosUso()">Eu aceito os termos
+              <br>e política de privacidade.</ion-checkbox>
 
             <div style="padding-top: 20px; padding-bottom: 20px;">
               <ion-button size="medium" color="primary" [disabled]="form.invalid" expand="block"
