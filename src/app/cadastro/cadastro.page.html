@@ -2,8 +2,8 @@
   <ion-toolbar style="display:none;" color="primary">
     <ion-buttons slot="end">
       <!-- <ion-menu-button></ion-menu-button> -->
-      
-  
+
+
     </ion-buttons>
     <ion-title>Cadastro</ion-title>
   </ion-toolbar>
@@ -13,35 +13,33 @@
     <ion-grid>
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
-          <div class="ion-padding">
+          <div>
             <ion-grid>
-              <ion-item class="itemPadding">
-                <ion-input placeholder="CPF" name="cpf" [(ngModel)]="cadastro.cpf" type="text" required>
-                </ion-input>
-              </ion-item>
 
-              <ion-item class="itemPadding">
-                <ion-input placeholder="Email" name="email" [(ngModel)]="cadastro.email" type="text" required>
-                </ion-input>
-              </ion-item>
-              <ion-item class="itemPadding">
-                <ion-input name="celular" placeholder="Celular" [(ngModel)]="cadastro.telefone" type="text" ngModel
-                  required>
-                </ion-input>
-              </ion-item>
-              <ion-item class="itemPadding">
-                <ion-input name="senha" placeholder="Senha" [(ngModel)]="cadastro.senha" type="password" ngModel
-                  required>
-                </ion-input>
-              </ion-item>
-              <ion-item class="itemPadding">
-                <ion-input name="senha" placeholder="Repetir Senha" [(ngModel)]="cadastro.repetirSenha" type="password"
-                  ngModel required>
-                </ion-input>
-              </ion-item>
+              <ion-input placeholder="CPF" name="cpf" [(ngModel)]="cadastro.cpf" fill="outline" shape="round" type="text" required>
+              </ion-input>
+
+
+              <ion-input placeholder="Email" name="email" [(ngModel)]="cadastro.email" fill="outline" shape="round" type="text"
+                required>
+              </ion-input>
+
+              <ion-input name="celular" placeholder="Celular" [(ngModel)]="cadastro.telefone" fill="outline" shape="round" type="text"
+                ngModel required>
+              </ion-input>
+
+              <ion-input name="senha" placeholder="Senha" [(ngModel)]="cadastro.senha" fill="outline" shape="round" type="password"
+                ngModel required>
+              </ion-input>
+
+              <ion-input name="senha" placeholder="Repetir Senha" [(ngModel)]="cadastro.repetirSenha" fill="outline"
+                type="password" ngModel required>
+              </ion-input>
+
 
             </ion-grid>
-            <ion-checkbox size="small" style="padding-top: 5%; padding-left: 25%;"  (click)="termosUso()">Eu aceito os termos
+            <ion-checkbox size="small" style="padding-top: 5%; padding-left: 25%;" (click)="termosUso()">Eu aceito os
+              termos
               <br>e política de privacidade.</ion-checkbox>
 
             <div style="padding-top: 20px; padding-bottom: 20px;">

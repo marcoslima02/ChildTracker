@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar id="toolbar" color="primary" style="display:none;">
     <ion-buttons slot="end">
-    
-     </ion-buttons>
+
+    </ion-buttons>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,21 +14,20 @@
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
           <div class="ion-text-center">
             <!-- <h1>Child Tracker</h1> -->
-            <img  src="assets/images/logo.png" alt="" id="logo">
-           
+            <img src="assets/images/logo.png" alt="" id="logo">
+
           </div>
-          <div class="ion-padding">
-            <ion-grid>
+          <div>
+            <ion-grid style="margin-top: 5%">
+              <ion-input name="email" [(ngModel)]="login.email" type="text"
+                placeholder="Login"  fill="outline" ngModel required>
+              </ion-input>
 
-              <ion-item class="itemPadding">
-                <ion-input name="email" [(ngModel)]="login.email" type="text" placeholder="Login" ngModel required>
-                </ion-input>
-              </ion-item>
-              <ion-item class="itemPadding">
-                <ion-input name="senha" [(ngModel)]="login.senha" type="password" placeholder="Senha" ngModel required>
-                </ion-input>
+              <ion-input style="margin-top: 5%" name="senha" [(ngModel)]="login.senha" type="password"
+                fill="outline" shape="round" placeholder="Senha" ngModel required>
+              </ion-input>
 
-              </ion-item>
+
               <ion-grid style="margin-top: 5%">
                 <ion-row>
                   <ion-col><small style="color:#5a37c3;text-align: right;text-decoration: underline;"
@@ -38,16 +37,16 @@
                         Usuário</ion-checkbox></small></ion-col>
                 </ion-row>
               </ion-grid>
-             
-              
 
 
 
-              
-                <div style="color:#a1a1a1;text-align: center;margin-left: auto;
+
+
+
+              <div style="color:#a1a1a1;text-align: center;margin-left: auto;
                 margin-right: auto;margin-bottom: 10%;margin-top: 15%;"><small>— ou conectar com —</small></div>
-              
-             
+
+
 
               <ion-grid style="padding-top: 5px;margin-bottom:40%;">
                 <ion-row>
@@ -62,13 +61,13 @@
                     </a>
                   </ion-col>
 
-                  <ion-col size="4"  style="margin-top: -8px;">
+                  <ion-col size="4" style="margin-top: -8px;">
                     <a (click)="loginWithApple()" class="login-button">
                       <img src="assets/svg/Apple_black.svg" alt="Apple">
                     </a>
                   </ion-col>
 
-                  
+
                 </ion-row>
               </ion-grid>
 
