@@ -17,34 +17,43 @@ export class CadastroPage implements OnInit {
   cadastro: CadastroModel = new CadastroModel();
   form: FormGroup;
 
+  senhaVisivel1: boolean = false; // Adicione essa linha
+
+  senhaVisivel2: boolean = false; // Adicione essa linha
+
   constructor(
     public theme: ThemeService,
     public formBuilder: FormBuilder,
     // public storage: Storage,
-    public alertController: AlertController, 
-    public loadingCtrl: LoadingController, 
+    public alertController: AlertController,
+    public loadingCtrl: LoadingController,
     public nav: NavController,
   ) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      cpf: [[],Validators.required],
-      email: [[],Validators.required],
-      senha: [[],Validators.required],
-      repetirSenha: [[],Validators.required],
-      telefone: [[],[]]
+      cpf: [[], Validators.required],
+      email: [[], Validators.required],
+      senha: [[], Validators.required],
+      repetirSenha: [[], Validators.required],
+      telefone: [[], []]
     });
   }
-
+  alternarTipoSenha1() {
+    this.senhaVisivel1 = !this.senhaVisivel1;
+  }
+  alternarTipoSenha2() {
+    this.senhaVisivel2 = !this.senhaVisivel2;
+  }
   /*
    * DARK / LIGHT THEME
    */
-  async enableDark(){
+  async enableDark() {
     // this.storage.set("theme", "dark");
     this.theme.enableDark();
   }
 
-  enableLight(){
+  enableLight() {
     // this.storage.set("theme", "light");
     this.theme.enableLight();
   }
@@ -54,20 +63,23 @@ export class CadastroPage implements OnInit {
    */
 
 
-  loginWithGoogle(){
+  loginWithGoogle() {
     console.log("google")
   }
-  loginWithFacebook(){
+  loginWithFacebook() {
     console.log("facebook")
   }
-  loginWithApple(){
+  loginWithApple() {
     console.log("apple")
   }
-  login(){
+  login() {
     this.nav.navigateRoot(['/login']);
   }
 
-  termosUso(){
+  termosUso() {
     console.log("Aceito os termos de uso")
+  }
+  LerTermosUso() {
+    console.log("PopUp os termos de uso")
   }
 }

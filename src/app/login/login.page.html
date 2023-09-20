@@ -19,19 +19,28 @@
           </div>
           <div>
             <ion-grid style="margin-top: 5%">
-              <ion-input name="email" [(ngModel)]="login.email" type="text"
-                placeholder="Login"  fill="outline" ngModel required>
-              </ion-input>
+              <ion-item lines="none" lines="none" text-center>
+                <ion-input name="email" [(ngModel)]="login.email" type="text" placeholder="Login" fill="outline" ngModel
+                  required>
+                </ion-input>
+              </ion-item>
 
-              <ion-input style="margin-top: 5%" name="senha" [(ngModel)]="login.senha" type="password"
-                fill="outline" shape="round" placeholder="Senha" ngModel required>
-              </ion-input>
+              <ion-item lines="none">
+                <ion-input name="senha" [(ngModel)]="login.senha" [type]="senhaVisivel ? 'text' : 'password'"
+                  fill="outline" shape="round" placeholder="Senha" ngModel required>
+                </ion-input>
+                <ion-button slot="end" (click)="alternarTipoSenha()" fill="clear">
+                  <ion-icon *ngIf="senhaVisivel" name="eye-off"></ion-icon>
+                  <ion-icon *ngIf="!senhaVisivel" name="eye"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+
 
 
               <ion-grid style="margin-top: 5%">
                 <ion-row>
-                  <ion-col><small style="color:#5a37c3;text-align: right;text-decoration: underline;"
-                      (click)="esqueceuSenha()">Esqueceu sua senha?</small></ion-col>
+                  <ion-col><small class="cor-link" (click)="esqueceuSenha()">Esqueceu sua senha?</small></ion-col>
 
                   <ion-col><small><ion-checkbox labelPlacement="end" (click)="lembrarUsuario()">Lembrar
                         Usuário</ion-checkbox></small></ion-col>
@@ -48,7 +57,7 @@
 
 
 
-              <ion-grid style="padding-top: 5px;margin-bottom:40%;">
+              <ion-grid style="padding-top: 5px;margin-bottom:10%;">
                 <ion-row>
                   <ion-col size="4">
                     <a (click)="loginWithGoogle()" class="login-button">
@@ -72,7 +81,7 @@
               </ion-grid>
 
 
-              <div style="padding-top: 20px; padding-bottom: 20px;">
+              <div style="padding-top: 5px; padding-bottom: 20px;">
                 <ion-button size="medium" color="primary" type="submit" [disabled]="form.invalid" expand="block"
                   shape="round">Criar minha conta!</ion-button>
               </div>

@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>    
-    </ion-buttons>
     <ion-title>Usuário</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" offset="4">
+        <ion-img src="sua-imagem.jpg" style="border-radius: 50%;" (click)="trocarFoto()"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Adicione outros campos aqui, como CPF, telefone, etc. -->
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="salvarDados()">Salvar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
