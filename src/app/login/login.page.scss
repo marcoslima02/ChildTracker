@@ -1,21 +1,12 @@
-:root {
-  --cor-primaria: #6815ec;
-  --cor-secundaria: #8147ff;
-}
-
-/* Estilização para .login-button */
 .login-button {
   display: block;
   width: 100%;
-  height: auto;
-  /* Alterado para 'auto' para ajustar à altura do conteúdo */
+  height: 100%;
   text-align: center;
   border-radius: 4px;
   padding: 10px;
   text-decoration: none;
   color: #000;
-  background-color: var(--cor-primaria);
-  /* Usando a variável de cor primária como background */
 }
 
 .login-button img {
@@ -23,61 +14,30 @@
   height: auto;
 }
 
-/* Estilização para .boldLabel */
 .boldLabel {
-  font-weight: bold;
-  /* Alterado para 'bold' para uma fonte mais negrito */
+  font-weight: 650;
 }
 
-/* Estilização para .itemPadding */
 .itemPadding {
   padding-top: 5px;
   padding-bottom: 13px;
 }
 
-/* Estilização para #logo */
 #logo {
   width: 50%;
-  max-width: 100%;
-  /* Adicionado 'max-width' para evitar esticamento da imagem */
 }
 
-/* Estilização para ion-checkbox */
 ion-checkbox {
   --size: 20px;
-  --checkbox-background-checked: var(--cor-primaria);
-  /* Usando a variável de cor primária */
+  --checkbox-background-checked: #6815ec;
   margin-left: 25%;
   margin-right: auto;
 }
 
 ion-checkbox::part(container) {
   border-radius: 6px;
-  border: 2px solid var(--cor-primaria);
-  /* Usando a variável de cor primária */
+  border: 2px solid #6815ec;
   display: flex;
+
   justify-content: flex-end;
-}
-
-/* Estilização para ion-item */
-ion-item {
-  padding: 2px;
-  /* Aumentado o padding para maior espaço interno */
-  border: 1px solid #ececec;
-  /* Adicionado uma borda */
-  border-radius: 30px;
-  box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.3);
-  /* Corrigido o valor 'rgb' para 'rgba' */
-  outline: none;
-  color: dimgray;
-  margin-top: 5%;
-  background-color: var(--cor-primaria);
-  /* Usando a variável de cor primária como background */
-}
-
-.cor-link {
-  color: var(--cor-primaria);
-  /* Usando a variável de cor primária como background */
-  text-decoration: underline;
-  cursor: pointer;
 }
