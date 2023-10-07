@@ -29,15 +29,52 @@
 
 ion-checkbox {
   --size: 20px;
-  --checkbox-background-checked: #6815ec;
+  --checkbox-background-checked: #5f39c2;
   margin-left: 25%;
   margin-right: auto;
 }
 
 ion-checkbox::part(container) {
   border-radius: 6px;
-  border: 2px solid #6815ec;
+  border: 2px solid #5f39c2;
   display: flex;
 
   justify-content: flex-end;
 }
+
+.login-input {
+  background-color: #eeeef154;
+  border: 1px solid #eeeef154;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.senha-input {
+  background-color: #eeeef154;
+  border: 1px solid #eeeef154;
+  border-radius: 4px;
+  padding: 10px;
+  position: relative;
+}
+
+.senha-input ion-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+.senha-input ion-icon.eye-visible{
+  color: #5f39c2;
+}
+
+.toggle-senha {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #5f39c2; 
+}
+
