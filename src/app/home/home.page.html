@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar style="display:none;">
+  <ion-toolbar>
     <ion-title style="display:none;">Início</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content scroll-y="true">
   <ion-grid>
     <ion-row>
       <!-- Coluna para o item "Início" -->
-      <ion-col size="4">
+      <ion-col size="6">
         <ion-item lines="none">
           <ion-label style="padding-right: 25%;">Início</ion-label>
         </ion-item>
@@ -16,44 +16,82 @@
 
       <!-- Coluna para o item "Lupa" com ícone -->
       <ion-col size="3">
-        <ion-item lines="none">
-          <ion-icon slot="start" name="search"></ion-icon>
-
+        <ion-item lines="none" class="ion-align-items-center ion-text-end">
+          <ion-icon slot="end" name="search"></ion-icon>
         </ion-item>
       </ion-col>
 
       <!-- Coluna para o item "3 pontos" com ícone -->
       <ion-col size="3">
-        <ion-item lines="none">
+        <ion-item lines="none" class="ion-align-items-center ion-text-end">
           <ion-icon slot="start" name="ellipsis-vertical"></ion-icon>
-
         </ion-item>
       </ion-col>
     </ion-row>
 
+    <!-- Linha separadora personalizada -->
+    <ion-row  style="border-top: 1px solid #000; margin-top: 5px; margin-bottom: 20px;"></ion-row>
+
     <ion-grid>
       <!-- Coluna para o botão "Locais" com ícone -->
       <ion-col size="12">
-        <ion-label expand="full">
-          <ion-icon slot="start" name="location"></ion-icon>
+        <ion-label expand="full" class="ion-text-end">
+          <ion-icon slot="end" name="location"></ion-icon>
           Locais
         </ion-label>
-        <ion-select placeholder="Filtro (Todos)"></ion-select>
-        <ion-select-option value="todos">Todos</ion-select-option>
-        <ion-select-option value="filtro1">Filtro 1</ion-select-option>
-        <ion-select-option value="filtro2">Filtro 2</ion-select-option>
+        <ion-button size="small" color="primary">Filtrar</ion-button>
       </ion-col>
     </ion-grid>
 
+    <!-- Linha separadora personalizada -->
+    <ion-row style="border-top: 1px solid #000; margin-top: 5px; margin-bottom: 20px;"></ion-row>
 
     <ion-row>
-      <!-- Coluna para a descrição "Cidade X" com ícone -->
+      <!-- Coluna para as imagens alinhadas à esquerda -->
       <ion-col size="12">
-        <ion-icon slot="start" name="location"></ion-icon>
-        <p>Cidade X</p>
-        <p>Cidade Y</p>
-        <P>Cidade Z</P>
+        <div style="display: flex; align-items: center;">
+          <div>
+            <img src="assets\images\pvilalobos.jfif" alt="Imagem 1" width="50" height="40">
+          </div>
+          <div style="flex-grow: 2; text-align: left; padding-left: 5px;">
+            <p>Parque Vila-Lobos</p>
+            <p style="color: #ccc;">São Paulo - SP</p>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid #ccc; margin: 5px 0;">
+        <div style="display: flex; align-items: center;">
+          <div>
+            <img src="assets\images\thermasdoslaranjais.jpg" alt="Imagem 2" width="50" height="40">
+          </div>
+          <div style="flex-grow: 2; text-align: left; padding-left: 5px;">
+            <p>Thermas dos laranjais</p>
+            <p style="color: #ccc;">Olímpia - SP</p>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid #ccc; margin: 5px 0;">
+        <div style="display: flex; align-items: center;">
+          <div>
+            <img src="assets\images\BeachPark.jfif" alt="Imagem 3" width="50" height="40">
+          </div>
+          <div style="flex-grow: 2; text-align: left; padding-left: 10px;">
+            <p>Beach Park</p>
+            <p style="color: #ccc;">Aquiraz - CE</p>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid #ccc; margin: 5px 0;">
+        <div style="display: flex; align-items: center;">
+          <div>
+            <img src="assets\images\Beto.jfif" alt="Imagem 4" width="50" height="40">
+          </div>
+          <div style="flex-grow: 2; text-align: left; padding-left: 10px;">
+            <p>Beto Carrero World</p>
+            <p style="color: #ccc;">Penha - SC</p>
+          </div>
+        </div>
       </ion-col>
     </ion-row>
-  </ion-grid>
-</ion-content>
+    </ion-grid>
+    </ion-content>
+  
+
+    
