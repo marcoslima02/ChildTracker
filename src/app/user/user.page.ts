@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-user',
@@ -12,9 +12,20 @@ import { IonicModule } from '@ionic/angular';
 })
 export class UserPage implements OnInit {
 
-  constructor() { }
+  constructor(
+
+    public nav: NavController,
+  ) { }
 
   ngOnInit() {
   }
 
+  // Define the trocarFoto() method
+  trocarFoto() {
+    // Add your code to handle image changing here
+  }
+
+  // Define the salvarDados() method
+  salvarDados() {
+  }
 }

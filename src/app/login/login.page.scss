@@ -14,11 +14,30 @@
   height: auto;
 }
 
-.boldLabel{
+.boldLabel {
   font-weight: 650;
 }
 
-.itemPadding{
+.itemPadding {
   padding-top: 5px;
   padding-bottom: 13px;
+}
+
+#logo {
+  width: 50%;
+}
+
+ion-checkbox {
+  --size: 20px;
+  --checkbox-background-checked: #6815ec;
+  margin-left: 25%;
+  margin-right: auto;
+}
+
+ion-checkbox::part(container) {
+  border-radius: 6px;
+  border: 2px solid #6815ec;
+  display: flex;
+
+  justify-content: flex-end;
 }
