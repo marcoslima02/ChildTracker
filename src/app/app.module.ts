@@ -7,6 +7,7 @@ import { IonicModule, IonicRouteStrategy, NavParams } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 // import { IonicStorageModule } from '@ionic/storage-angular';
 
 @NgModule({
@@ -27,3 +28,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+Holder.addTheme('thumb', {
+  bg: '#777',
+  fg: 'gray',
+  size: 16,
+  fontweight: 'normal'
+ });
