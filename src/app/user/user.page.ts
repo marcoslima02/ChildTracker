@@ -1,31 +1,59 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule, NavController } from '@ionic/angular';
+import { AlertController, IonicModule, LoadingController, NavController } from '@ionic/angular';
+import { NgForm } from '@angular/forms';
+import { ProfileModel } from 'src/app/models/profile-model'; // Import your ProfileModel
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-profile',
   templateUrl: './user.page.html',
   styleUrls: ['./user.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
-export class UserPage implements OnInit {
+export class ProfilePage implements OnInit {
+  public profile = new ProfileModel();
+  public senhaVisivel = false;
+
+  @ViewChild('form', { static: false }) form: NgForm;
 
   constructor(
-
+    public alertController: AlertController,
+    public loadingCtrl: LoadingController,
     public nav: NavController,
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    // If there is no profile image, use the default person-circle icon
+    if (!this.profile.profileImage) {
+      this.profile.profileImage = "assets/svg/person-circle.svg";
+    }
   }
 
-  // Define the trocarFoto() method
-  trocarFoto() {
-    // Add your code to handle image changing here
+  async changeProfilePicture() {
+    console.log("Change Profile Picture");
+    // Add your code here to change the profile picture
   }
 
-  // Define the salvarDados() method
-  salvarDados() {
+
+  async changeEmail() {
+    console.log("Change Email");
+    // Add your code here to change the email
+    // For example, send a request to the server to update the email
   }
+
+  async changePassword() {
+    console.log("Change Password");
+    // Add your code here to change the password
+    // For example, open a dialog to enter a new password
+  }
+
+  logout() {
+    console.log("Logout");
+    // Add your code here to logout
+    // For example, clear the user session and navigate back to the login page
+  }
+
+  
 }

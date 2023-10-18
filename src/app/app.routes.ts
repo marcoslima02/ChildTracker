@@ -1,7 +1,8 @@
+// app.routes.ts
 import { Routes } from '@angular/router';
 import { HomePage } from './home/home.page';
 import { LocalizacaoPage } from './localizacao/localizacao.page';
-import { UserPage } from './user/user.page';
+import { ProfilePage } from './user/user.page'; // Changed UserPage to ProfilePage
 
 export const routes: Routes = [
   {
@@ -35,14 +36,14 @@ export const routes: Routes = [
       },
       {
         path: 'user',
-        component: UserPage
+        component: ProfilePage // Changed UserPage to ProfilePage
       }
       // outras rotas aqui, se necessário
     ]
   },
   {
     path: 'user',
-    loadComponent: () => import('./user/user.page').then( m => m.UserPage)
+    loadComponent: () => import('./user/user.page').then( m => m.ProfilePage) // Changed UserPage to ProfilePage
   },
   {
     path: 'localizacao',
