@@ -19,24 +19,20 @@
           </div>
           <div>
             <ion-grid style="margin-top: 5%">
-              <ion-item lines="none" lines="none" text-center>
-                <ion-input name="email" [(ngModel)]="login.email" type="text" placeholder="Login" fill="outline" ngModel
-                  required>
+              <ion-item lines="none" text-center>
+                <ion-input name="email" [(ngModel)]="login.email" type="text" placeholder="Login" ngModel required>
                 </ion-input>
               </ion-item>
 
               <ion-item lines="none">
                 <ion-input name="senha" [(ngModel)]="login.senha" [type]="senhaVisivel ? 'text' : 'password'"
-                  fill="outline" shape="round" placeholder="Senha" ngModel required>
+                 placeholder="Senha" ngModel required>
                 </ion-input>
                 <ion-button slot="end" (click)="alternarTipoSenha()" fill="clear">
                   <ion-icon *ngIf="senhaVisivel" name="eye-off"></ion-icon>
                   <ion-icon *ngIf="!senhaVisivel" name="eye"></ion-icon>
                 </ion-button>
               </ion-item>
-
-
-
 
               <ion-grid style="margin-top: 5%">
                 <ion-row>
