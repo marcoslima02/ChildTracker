@@ -24,7 +24,7 @@
 }
 
 #logo {
-  width: 50%;
+  width: 70%;
 }
 
 ion-checkbox {
@@ -40,4 +40,20 @@ ion-checkbox::part(container) {
   display: flex;
 
   justify-content: flex-end;
+}
+
+
+ion-item {
+  padding: 2px;
+  /* Aumentado o padding para maior espaço interno */
+  border: 1px solid #ececec;
+  /* Adicionado uma borda */
+  border-radius: 30px;
+  box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.3);
+  /* Corrigido o valor 'rgb' para 'rgba' */
+  outline: none;
+  color: dimgray;
+  margin-top: 5%;
+  background-color: var(--cor-primaria);
+  /* Usando a variável de cor primária como background */
 }

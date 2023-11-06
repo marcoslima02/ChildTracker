@@ -13,26 +13,29 @@
     <ion-grid>
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div class="ion-text-center">
+            <img src="assets/images/logoChildTracker.png" alt="" id="logo">
+          </div>
           <div>
-            <ion-grid style="padding-bottom:60%;">
+            <ion-grid style="padding-bottom:10%;">
               <ion-item lines="none">
-                <ion-input placeholder="CPF" name="cpf" [(ngModel)]="cadastro.cpf" fill="outline" shape="round"
+                <ion-input placeholder="CPF" name="cpf" [(ngModel)]="cadastro.cpf" shape="round"
                   type="text" required>
                 </ion-input>
               </ion-item>
               <ion-item lines="none">
-                <ion-input placeholder="Email" name="email" [(ngModel)]="cadastro.email" fill="outline" shape="round"
+                <ion-input placeholder="Email" name="email" [(ngModel)]="cadastro.email" shape="round"
                   type="text" required>
                 </ion-input>
               </ion-item>
               <ion-item lines="none">
-                <ion-input name="celular" placeholder="Celular" [(ngModel)]="cadastro.telefone" fill="outline"
+                <ion-input name="celular" placeholder="Celular" [(ngModel)]="cadastro.telefone" 
                   shape="round" type="text" ngModel required>
                 </ion-input>
               </ion-item>
 
               <ion-item lines="none">
-                <ion-input name="senha" placeholder="Senha" [(ngModel)]="cadastro.senha" fill="outline" shape="round"
+                <ion-input name="senha" placeholder="Senha" [(ngModel)]="cadastro.senha" shape="round"
                   [type]="senhaVisivel1 ? 'text' : 'password'" ngModel required>
                 </ion-input>
                 <ion-button slot="end" (click)="alternarTipoSenha1()" fill="clear">
@@ -44,7 +47,7 @@
               <!-- Campo de Repetir Senha -->
               <ion-item lines="none">
                 <ion-input name="repetirSenha" placeholder="Repetir Senha" [(ngModel)]="cadastro.repetirSenha"
-                  fill="outline" [type]="senhaVisivel2 ? 'text' : 'password'" ngModel required>
+                   [type]="senhaVisivel2 ? 'text' : 'password'" ngModel required>
                 </ion-input>
                 <ion-button slot="end" (click)="alternarTipoSenha2()" fill="clear">
                   <ion-icon *ngIf="senhaVisivel2" name="eye-off"></ion-icon>
@@ -58,19 +61,17 @@
             <ion-label size="small" style="color: #313131; font-weight: bold; padding-left: 25%; padding-bottom: 20%;"
               (click)="LerTermosUso()">Ler termos de uso de usuário</ion-label>
             <ion-checkbox size="small" style=" padding-left: 25%; padding-top: 15%; padding-bottom: 5%;"
-              (click)="LerTermosUso()">Eu aceito
-              os
-              termos
-              <br>e política de privacidade.</ion-checkbox>
-
+              (click)="LerTermosUso()">Eu aceito os termos
+              <br>e política de privacidade.
+            </ion-checkbox>
 
             <div style="padding-top: 5%; padding-bottom: 5%;">
               <ion-button size="medium" color="primary" [disabled]="form.invalid" expand="block"
                 shape="round">Cadastrar</ion-button>
             </div>
             <div style="text-align: center; padding-top: 7px;">
-              <ion-label (click)="login()" style="color: #8147ff;font-weight: 700;padding-bottom: 5%;">
-                Já tem uma Conta?</ion-label>
+              <ion-label (click)="login()" style="color: #8147ff;font-weight: 700;padding-bottom: 5%;">Esqueceu sua
+                senha?</ion-label>
             </div>
 
 
