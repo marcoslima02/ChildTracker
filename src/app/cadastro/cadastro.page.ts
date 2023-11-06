@@ -30,11 +30,11 @@ export class CadastroPage implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      cpf: [[], Validators.required],
-      email: [[], Validators.required],
-      senha: [[], Validators.required],
-      repetirSenha: [[], Validators.required],
-      telefone: [[], []]
+      cpf: [null, Validators.required],
+      email: [null, Validators.required],
+      senha: [null, Validators.required],
+      repetirSenha: [null, Validators.required],
+      telefone: [null, []]
     });
   }
   alternarTipoSenha1() {
@@ -61,5 +61,53 @@ export class CadastroPage implements OnInit {
   }
   LerTermosUso() {
     console.log("PopUp os termos de uso")
+  }
+
+  async cadastrar(){
+    if(this.cadastro.senha != this.cadastro.repetirSenha){
+      const alert = await this.alertController.create({
+        header: 'Aviso',
+        message: 'As senhas não podem ser diferentes!',
+        buttons: ['OK'],
+      });
+      await alert.present();
+      return;
+    }
+
+    if(this.cadastro.email != "marcoslima@gmail.com" ){
+      const alert = await this.alertController.create({
+        header: 'Aviso',
+        message: 'Email Inválido!',
+        buttons: ['OK'],
+      });
+      await alert.present();
+      return;
+    }
+
+    if(this.cadastro.senha != "childtracker1234" ){
+      const alert = await this.alertController.create({
+        header: 'Aviso',
+        message: 'Senha Inválida!',
+        buttons: ['OK'],
+      });
+      await alert.present();
+      return;
+    }
+
+    const loading = await this.loadingCtrl.create(
+      { message: 'Comunicando com o servidor...' }
+    );
+    await loading.present();
+    setTimeout(async () => {
+      await loading.dismiss();
+      const alert = await this.alertController.create({
+        header: 'Sucesso',
+        message: 'Usuário cadastrado com sucesso!',
+        buttons: ['OK'],
+      });
+      await alert.present();
+      this.login();
+    }, 1500);
+    
   }
 }

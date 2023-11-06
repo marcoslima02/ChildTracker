@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" class="ion-padding">
-  <form #form="ngForm">
+  <form #form="ngForm" (ngSubmit)="cadastrar()">
     <ion-grid>
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
@@ -66,12 +66,15 @@
             </ion-checkbox>
 
             <div style="padding-top: 5%; padding-bottom: 5%;">
-              <ion-button size="medium" color="primary" [disabled]="form.invalid" expand="block"
-                shape="round">Cadastrar</ion-button>
+              <!-- <ion-button size="medium" color="primary" [disabled]="form.invalid" expand="block"
+                shape="round">Cadastrar</ion-button> -->
+                <ion-button size="medium" color="primary" type="submit" [disabled]="form.invalid" expand="block"
+                  shape="round">Cadastrar</ion-button>
             </div>
             <div style="text-align: center; padding-top: 7px;">
-              <ion-label (click)="login()" style="color: #8147ff;font-weight: 700;padding-bottom: 5%;">Esqueceu sua
-                senha?</ion-label>
+              <ion-label (click)="login()" style="color: #8147ff;font-weight: 700;padding-bottom: 5%;">
+                Já tem uma Conta?
+              </ion-label>
             </div>
 
 
