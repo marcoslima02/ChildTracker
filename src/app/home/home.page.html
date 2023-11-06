@@ -1,32 +1,30 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar style="display:none;">
     <ion-title style="display:none;">Início</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
   <ion-grid>
     <ion-row>
       <!-- Coluna para o item "Início" -->
-      <ion-col size="4">
+      <ion-col size="6">
         <ion-item lines="none">
-          <ion-label style="padding-right: 25%;">Início</ion-label>
+          <ion-label style="padding-right: 25%;"><strong>Início</strong></ion-label>
         </ion-item>
       </ion-col>
 
       <!-- Coluna para o item "Lupa" com ícone -->
       <ion-col size="3">
         <ion-item lines="none">
-          <ion-icon slot="start" name="search"></ion-icon>
-
+          <ion-icon slot="end" name="search"></ion-icon>
         </ion-item>
       </ion-col>
 
       <!-- Coluna para o item "3 pontos" com ícone -->
       <ion-col size="3">
         <ion-item lines="none">
-          <ion-icon slot="start" name="ellipsis-vertical"></ion-icon>
-
+          <ion-icon slot="end" name="ellipsis-vertical"></ion-icon>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -47,13 +45,25 @@
 
 
     <ion-row>
-      <!-- Coluna para a descrição "Cidade X" com ícone -->
-      <ion-col size="12">
-        <ion-icon slot="start" name="location"></ion-icon>
-        <p>Cidade X</p>
-        <p>Cidade Y</p>
-        <P>Cidade Z</P>
-      </ion-col>
+
+      <ion-card *ngFor="let e of empresas" (click)="selecionarEmpresa(e)" style="width: 100%;">
+        <ion-card-header>
+          <ion-card-title><strong>{{e.empresa}}</strong></ion-card-title>
+          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item (click)="selecionarEmpresa(e)">
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <!-- <ion-label><strong>{{e.empresa}}</strong></ion-label> -->
+            <ion-label>{{e.descricao}}</ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      
     </ion-row>
+
+
   </ion-grid>
 </ion-content>

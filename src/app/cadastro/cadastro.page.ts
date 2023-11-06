@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { AlertController, IonicModule, LoadingController, NavController } from '@ionic/angular';
-import { ThemeService } from '../services/theme.service';
 import { CadastroModel } from '../models/cadastro-model';
 
 @Component({
@@ -22,7 +21,6 @@ export class CadastroPage implements OnInit {
   senhaVisivel2: boolean = false; // Adicione essa linha
 
   constructor(
-    public theme: ThemeService,
     public formBuilder: FormBuilder,
     // public storage: Storage,
     public alertController: AlertController,
@@ -45,24 +43,6 @@ export class CadastroPage implements OnInit {
   alternarTipoSenha2() {
     this.senhaVisivel2 = !this.senhaVisivel2;
   }
-  /*
-   * DARK / LIGHT THEME
-   */
-  async enableDark() {
-    // this.storage.set("theme", "dark");
-    this.theme.enableDark();
-  }
-
-  enableLight() {
-    // this.storage.set("theme", "light");
-    this.theme.enableLight();
-  }
-
-  /*
-   * END OF DARK / LIGHT THEME
-   */
-
-
   loginWithGoogle() {
     console.log("google")
   }
