@@ -74,25 +74,25 @@ export class CadastroPage implements OnInit {
       return;
     }
 
-    if(this.cadastro.email != "marcoslima@gmail.com" ){
-      const alert = await this.alertController.create({
-        header: 'Aviso',
-        message: 'Email Inválido!',
-        buttons: ['OK'],
-      });
-      await alert.present();
-      return;
-    }
+    // if(this.cadastro.email != "marcoslima@gmail.com" ){
+    //   const alert = await this.alertController.create({
+    //     header: 'Aviso',
+    //     message: 'Email Inválido!',
+    //     buttons: ['OK'],
+    //   });
+    //   await alert.present();
+    //   return;
+    // }
 
-    if(this.cadastro.senha != "childtracker1234" ){
-      const alert = await this.alertController.create({
-        header: 'Aviso',
-        message: 'Senha Inválida!',
-        buttons: ['OK'],
-      });
-      await alert.present();
-      return;
-    }
+    // if(this.cadastro.senha != "childtracker1234" ){
+    //   const alert = await this.alertController.create({
+    //     header: 'Aviso',
+    //     message: 'Senha Inválida!',
+    //     buttons: ['OK'],
+    //   });
+    //   await alert.present();
+    //   return;
+    // }
 
     const loading = await this.loadingCtrl.create(
       { message: 'Comunicando com o servidor...' }

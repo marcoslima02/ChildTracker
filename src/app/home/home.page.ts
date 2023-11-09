@@ -31,25 +31,32 @@ export class HomePage {
     this.empresas = [
       {
         id: 2,
+        empresa: "UNIP Limeira",
+        descricao: "R. Miguel Guidote, 405 - Parque Egisto Ragazzo, Limeira - SP, 13485-342",
+        // descricao: "Parque Desertico pequeno e monocromatico com escorregadores, areia e nunca festas.",
+        imagem: "assets/images/unip.jpg"
+      },
+      {
+        id: 3,
         empresa: "Dry'n Wild",
-        descricao: "Av. Renato Pavanelli, 132 - Rafael Alegre",
+        descricao: "Rua Renato Pavanelli, 132 - Granja Machado",
         // descricao: "Parque Desertico pequeno e monocromatico com escorregadores, areia e nunca festas.",
         imagem: "assets/images/desert.jpg"
       },
       {
         id: 1,
         empresa: "Wet but not Wild",
-        descricao: "Av. Antonio Negro, 198 - Granja Machado",
+        descricao: "Rua Antonio Negro, 198 - Granja Machado",
         // descricao: "Parque aquático amplo e colorido com toboáguas, piscina de ondas e eventos e DJs esporádicos.",
         imagem: "assets/images/wetButNotWild.jpg"
       },
-      {
-        id: 3,
-        empresa: "Atlantic City",
-        descricao: "Av. Caio Enrico, 345 - Rennas Visk",
-        // descricao: "Parque aquático amplo e colorido com toboáguas, piscina de ondas e eventos e DJs esporádicos.",
-        imagem: "assets/images/atlanticCity.jpg"
-      }
+      // {
+      //   id: 3,
+      //   empresa: "Atlantic City",
+      //   descricao: "Av. Caio Enrico, 345 - Rennas Visk",
+      //   // descricao: "Parque aquático amplo e colorido com toboáguas, piscina de ondas e eventos e DJs esporádicos.",
+      //   imagem: "assets/images/atlanticCity.jpg"
+      // }
     ]
   }
 
